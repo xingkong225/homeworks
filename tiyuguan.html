@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/tiyuguan.css">
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script>
+    	$(function(){    		
+    	   //自动播放的轮播
+    	   (function(){
+    	   		var oDiv = $('#fade');
+    	   		var aUlLi = oDiv.find('ul li');
+    	   		var aOlLi = oDiv.find('ol li');
+    	   		var oP = oDiv.find('p');
+    	   		var arr = [ '人在塔在', '十步杀一人，千里不留行', '今朝有酒今朝醉' ];
+    	   		var iNow = 1;
+    	   		var timer = null;
+
+    	   		fnFade();
+    	   		autoPlay();
+
+    	   		aOlLi.click(function(){
+    	   			iNow = $(this).index();
+    	   			fnFade();
+    	   		});
+    	   		oDiv.hover(function(){clearInterval(timer);}, autoPlay);
+
+
+    	   		function autoPlay() {
+    	   			timer = setInterval(function () {
+    	   				iNow++;
+    	   				iNow%=arr.length;
+    	   				fnFade();
+    	   			}, 1000);
+    	   		}
+
+    	   		function fnFade() {
+    	   			aUlLi.each(function(i){
+    	   				if ( i != iNow ) {
+    	   					aUlLi.eq(i).fadeOut().css('zIndex',1);
+    	   					aOlLi.eq(i).removeClass('active');
+    	   				}
+    	   				else
+    	   				{
+    	   					aUlLi.eq(i).fadeIn().css('zIndex',2);
+    	   					aOlLi.eq(i).addClass('active');
+
+    	   				}
+    	   			});
+    	   			oP.text(arr[iNow]);
+
+    	   		}
+
+
+
+    	   })();
+    	});
+    </script>
+
+    
+	<script>
+window.onload = function () {
+//选项卡切换
+var oD = document.getElementById('dongtai');
+var oS = oD.getElementsByTagName('span');
+var oC = document.getElementById('con1');
+var oDiv = oC.getElementsByTagName('div');
+
+for (var i = 0; i < oS.length; i++) {
+	oS[i].index = i;
+	oS[i].onclick = function () {
+		for (var j = 0; j < oDiv.length; j++) {
+			oDiv[j].className = "";
+			oS[j].className = "";
+		}
+	oDiv[this.index].className = "now";
+	oS[this.index].className = "active";
+	}
+}
+
+}
+</script>
+
+</head>
+<body>
+
+	<div id="header">
+		<div class="wrap">
+			<div class="conl fl">
+				<a class="img" href="#"><img src="images/dbsf.png" alt=""></a>
+				<ul id="nav">
+					<li class="suo"><a href="#">首页</a></li>
+					<li><a href="#">场馆动态</a></li>
+					<li><a href="#">场馆概况</a></li>
+					<li><a href="#">场馆服务</a></li>
+					<li><a href="#">场馆设施</a></li>
+					<li><a href="#">场馆管理</a></li>
+					<li><a href="#">联系我们</a></li>
+				</ul>
+			</div>
+
+
+			<div class="slider fr" id="fade">
+				<ul>
+					<li><a href="#"><img src="images/img1.png" alt=""></a></li>
+					<li><a href="#"><img src="images/img2.png" alt=""></a></li>
+					<li><a href="#"><img src="images/img3.png" alt=""></a></li>
+				</ul>
+				<div class="wra">
+					<ol>
+						<li class="active"><a href="#"><img src="images/img_bg1.png" alt=""></a></li>
+						<li><a href="#"><img src="images/img_bg2.png" alt=""></a></li>
+						<li><a href="#"><img src="images/img_bg3.png" alt=""></a></li>
+					</ol>
+					<p>祝贺我的Javascript能够编写成功</p>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="login">
+			<p>活动卡信息查询、俱乐部网上预订（登陆窗口）</p>
+			<form action="#" method="get">
+				<input class="text1" type="text" value="| 会员账号" />
+				<input class="text2" type="text" value="| 密码" /><br />
+				<input class="check1" type="radio" checked="checked" name="hui" /><em>俱乐部</em>
+				<input class="check2" type="radio" name="hui" /><span>普通会员</span>
+				<input class="btn" type="button" value="立即登录" />
+			</form>
+		</div>
+
+		<div class="dongtai">
+			<h1><a href="#">场馆动态</a><span>VENUE<br />DYNAMIC</span></h1>
+			<div id="dongtai">
+				<span class="active">场馆公告 </span><span> 最新信息</span>
+			</div>
+			<div id="con1">
+				<div class="now" id="mol1">
+					<ul>
+						<li>
+							<span>18</span>
+							<em>FEB</em>
+							<h5><a href="#">关于综合体育馆临时闭馆的通知</a></h5>
+							<h6>balabalabala乱七八糟</h6>
+						</li>
+						<li>
+							<span>02</span>
+							<em>OCT</em>
+							<h5><a href="#">拉格朗日</a></h5>
+							<h6>balabalabala拉格朗日微分中指定理</h6>
+						</li>
+					</ul>
+				</div>
+				<div id="mol2">
+					<ul>
+						<li>
+							<span>25</span>
+							<em>SEPT</em>
+							<h5><a href="#">js是什么样子</a></h5>
+							<h6>柯西微分中指定理</h6>
+						</li>
+						<li>
+							<span>30</span>
+							<em>FEB</em>
+							<h5><a href="#">作业写完了没</a></h5>
+							<h6>滚去写作业</h6>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="zhuanti">
+			<h1><a href="#">专题报道</a><span>SPECIAL<br />REPROT</span></h1>
+			<a class="img" href="#"><img src="images/zhaoshou.png" alt=""></a>
+			<h2><a href="#"><关于综合体育馆的专题报道></a></h2>
+			<strong>体育学院“冬令营”活动于2014年11月28日结束...</strong>
+		</div>
+
+		<div class="shipin">
+			<h1><a href="#">视频专栏</a><span>VIDEO<br />COLUMN</span></h1>
+			<a class="img" href="#"><img src="images/shipin.png" alt=""></a>
+		</div>
+	</div>
+	
+	<div class="lianxi">
+		<div class="lian1 fl">
+			<ul>
+				<li class="bg1"><a href="#">吉林省长春市南关区人民大街5268号 邮政编码：130024</a></li>
+				<li class="bg2"><a href="#">0431-85098693（传真） 办公地点：体育学院122室</a></li>
+				<li class="bg3"><a href="#">GYM@NENU.COM</a></li>
+			</ul>
+		</div>
+		<div class="lian2 fr">
+			<a class="bg1" href="#"></a>
+			<a class="bg2" href="#"></a>
+			<ul>
+				<li class="active"><a href="#">网站地图</a></li>
+				<li class="active"><a href="#">版权说明</a></li>
+				<li class="active"><a href="#">在线留言</a></li>
+				<li><a href="#">用户登录</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<p class="p1">COPYRIGHT@2014 东北师范大学综合体育馆. ALL RIGHT RESERVED</p>
+		<p class="p2">互动营销：艾迪索思</p>
+	</div>
+
+
+</body>
+</html>
