@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* 样式重置 */
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+em {
+	font-style: normal;
+}
+input, textarea {
+	outline: none;
+}
+textarea {
+	resize: none; overflow: hidden;
+}
+body {
+	font-size: 14px;
+	font-family: "微软雅黑" ;
+	background: #f4f4f4;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+
+/* public */
+.fl { float: left; }
+.fr { float: right; }
+
+/* zhengwen */
+#header { width: 1250px; height: 96px; margin: 0 auto; background: #fff; box-shadow: 0 3px 5px #b9b9b9; padding: 44px 50px 0; margin-bottom: 26px; }
+#header img { width: 106px; height: 63px; cursor: pointer; }
+#header a{ display: inline-block; height: 63px; width: 175px; padding-left: 28px; border-left: 2px solid #259fc8; font-size: 18px; color: #259fc8; }
+#header a:hover { text-decoration: underline; }
+#header a span { font-size: 27px; font-family: "隶书"; }
+
+#con { width: 1200px; margin: 0 auto; overflow: hidden; }
+#con .con1 { width: 950px; }
+#con .con1 h3 { height: 51px;padding-left: 33px; line-height: 51px; border-bottom: 1px solid #2ba2c9; background: #e3e3e3; color: #a1a1a1; }
+#con .con1 h3 span { color: #2ba2c9; font-weight: normal; font-size: 16px; padding-right: 15px; }
+
+#con .tab { padding: 20px 0 66px 32px; background: #fff; }
+#con .tab ul { width: 888px; height: 421px; border: 1px solid #dedede; }
+#con .tab ul li { height: 36px; line-height: 36px; border-top: 1px solid #dedede; }
+#con .tab ul li p { color: #4c4c4c; float: left; }
+#con .tab ul li .p1 { width: 149px; padding-left: 21px; background: #f7f7f7; }
+#con .tab ul li .p2 { padding-left: 20px; background: #fff; border-left: 1px solid #dedede; }
+#con .tab ul li.head { border: none; background: url(../images/pu.jpg) repeat-x; position: relative; }
+#con .tab ul li.fin { height: 164px; }
+#con .tab ul li.fin p { height: 163px; }
+#con .tab ul li.head span { position: absolute; }
+#con .tab ul li.head .span1 { font-size: 16px; color: #1f1f1f; left: 20px; }
+#con .tab ul li.head .span2 { display: inline-block; width: 175px; color: #3aa835; background: url(../images/dui.jpg) no-repeat 150px; left: 192px; }
+
+
+
+
+ 
+#con .con2 { width: 233px; }
+#con .con2 h3 { height: 50px; text-align: center; line-height: 50px; background: #e3e3e3; border-bottom: 1px solid #2ba2c9; color: #1f1f1f; font-weight: normal; font-size: 16px; }
+#con .con2 ul { background: #fff; height: 510px; }
+#con .con2 ul li { height: 156px; position: relative; }
+#con .con2 ul li span { color: #666; position: absolute; }
+#con .con2 .span1 { left: 90px; top: 90px; }
+#con .con2 .span2 { left: 69px; top: 112px; }
+#con .con2 ul li a { display: inline-block; width: 42px; height: 36px; }
+#con .con2 ul li img { width: 42px; height: 36px; position: absolute; left: 95px; top: 39px; }
+#con .con2 ul li.dif { position: relative; }
+#con .con2 ul li.dif .span2 { position: absolute; left: 52px; }
+
+
+#footer { width: 1350px; height: 96px; padding-top: 26px; border-top: 11px solid #259fc8; margin: 60px auto 0; box-sizing: border-box; }
+#footer img { width: 122px; height: 96px; margin-left: 345px; }
+#footer ul { border-left: 2px solid #000; padding-left: 16px; display: inline-block; }
+#footer ul li { height: 21px; line-height: 21px; color: #333; }
