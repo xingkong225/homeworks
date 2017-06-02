@@ -35,11 +35,10 @@ img {
 .fr { float: right; }
 
 /* zhengwen */
-#header { width: 1250px; height: 96px; margin: 0 auto; background: #fff; box-shadow: 0 3px 5px #b9b9b9; padding: 44px 50px 0; margin-bottom: 26px; }
-#header img { width: 106px; height: 63px; cursor: pointer; }
-#header a{ display: inline-block; height: 63px; width: 175px; padding-left: 28px; border-left: 2px solid #259fc8; font-size: 18px; color: #259fc8; }
-#header a:hover { text-decoration: underline; }
-#header a span { font-size: 27px; font-family: "隶书"; }
+#header { width: 1250px-; height: 96px; margin: 0 auto; background: #fff; box-shadow: 0 3px 5px #b9b9b9; background: #f4f4f4; padding: 44px 360px 0; margin-bottom: 26px; }
+#header img { width: 92px; height: 61px; cursor: pointer; }
+#header p { width: 202px; height: 23px; display: inline-block; border-left: 2px solid #259fc8; padding-top: 38px; padding-left: 27px; background: url(../images/dong.jpg) no-repeat 27px 0; }
+#header p a { color: #259fc8;  font-size: 18px; }
 
 #con { width: 1200px; margin: 0 auto; overflow: hidden; }
 #con .con1 { width: 950px; }
@@ -53,8 +52,8 @@ img {
 #con .tab ul li .p1 { width: 149px; padding-left: 21px; background: #f7f7f7; }
 #con .tab ul li .p2 { padding-left: 20px; background: #fff; border-left: 1px solid #dedede; }
 #con .tab ul li.head { border: none; background: url(../images/pu.jpg) repeat-x; position: relative; }
-#con .tab ul li.fin { height: 164px; }
-#con .tab ul li.fin p { height: 163px; }
+#con .tab ul li.fin { height: 200px; }
+#con .tab ul li.fin p { height: 199px; }
 #con .tab ul li.head span { position: absolute; }
 #con .tab ul li.head .span1 { font-size: 16px; color: #1f1f1f; left: 20px; }
 #con .tab ul li.head .span2 { display: inline-block; width: 175px; color: #3aa835; background: url(../images/dui.jpg) no-repeat 150px; left: 192px; }
@@ -76,7 +75,8 @@ img {
 #con .con2 ul li.dif .span2 { position: absolute; left: 52px; }
 
 
-#footer { width: 1350px; height: 96px; padding-top: 26px; border-top: 11px solid #259fc8; margin: 60px auto 0; box-sizing: border-box; }
-#footer img { width: 122px; height: 96px; margin-left: 345px; }
-#footer ul { border-left: 2px solid #000; padding-left: 16px; display: inline-block; }
+#footer { height: 96px; padding-top: 26px; border-top: 11px solid #259fc8; }
+#footer .wrap { width: 610px; margin: 0 auto; }
+#footer img { width: 112px; height: 96px; }
+#footer ul { width: 468px; height: 68px; border-left: 2px solid #000; padding-left: 16px; display: inline-block; }
 #footer ul li { height: 21px; line-height: 21px; color: #333; }
